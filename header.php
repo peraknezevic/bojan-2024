@@ -7,7 +7,7 @@
 
 		<title><?php wp_title( '|', true, 'right' ); ?></title>
 
-		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600|Source+Serif+Pro:400,700" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600" rel="stylesheet">
 
         <?php wp_head(); ?>
         

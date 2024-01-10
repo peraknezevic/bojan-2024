@@ -82,8 +82,10 @@ add_filter( 'excerpt_more', 'wpdocs_excerpt_more' );
 
 function ah_share_buttons() {
 ?>
-<span class="share">Podeli: <a class="facebook" title="Podeli na Facebook-u" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode(get_permalink($post->ID)); ?>&amp;amp;t=<?php echo rawurlencode(strip_tags(get_the_title())) ?>" target="blank" rel="nofollow"></a>
-<a class="twitter" title="Podeli na Twitter-u" href="https://twitter.com/intent/tweet?source=webclient&amp;amp;text=<?php echo rawurlencode(strip_tags(get_the_title())) ?> <?php echo urlencode(get_permalink($post->ID)); ?>" target="blank" rel="nofollow"></a>
+<span class="share">
+	Podeli: 
+	<a class="facebook" title="Podeli na Facebook-u" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode(get_permalink($post->ID)); ?>&amp;amp;t=<?php echo rawurlencode(strip_tags(get_the_title())) ?>" target="blank" rel="nofollow"></a>
+	<a class="twitter" title="Podeli na Twitter-u" href="https://twitter.com/intent/tweet?source=webclient&amp;amp;text=<?php echo rawurlencode(strip_tags(get_the_title())) ?> <?php echo urlencode(get_permalink($post->ID)); ?>" target="blank" rel="nofollow"></a>
 </span>
 <?php }
 
