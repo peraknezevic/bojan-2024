@@ -7,8 +7,6 @@
 	License:           GNU General Public License v3 or later
 */
 :root {
-  --main-font: "Roboto", sans-serif;
-
   /* Colors */
 
   --zinc-50: #fafafa;
@@ -16,7 +14,16 @@
   --zinc-200: #e4e4e7;
   --zinc-600: #52525b;
   --zinc-900: #18181b;
+  --red-500: #f87171;
   --red-700: #b91c1c;
+  --rose-50: #fff1f2;
+  --rose-600: #e11d48;
+  --rose-800: #9f1239;
+  --rose-900: #881337;
+
+  --main-font: "Roboto", sans-serif;
+  --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --transition: all 0.1s ease-out;
 }
 
 html {
@@ -26,11 +33,12 @@ html {
 body {
   font-family: var(--main-font);
   font-size: 16px;
-  background-color: var(--zinc-100);
+  background-color: var(--rose-50);
   padding: 2rem 1rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  margin: 0 auto;
 }
 
 div,
@@ -39,14 +47,24 @@ p {
   padding: 0;
 }
 
+li {
+  list-style: none;
+}
+p {
+  line-height: 1.5em;
+}
+
 a {
-  color: var(--zinc-900);
+  color: var(--rose-900);
   text-decoration-thickness: 2px;
-  text-decoration-color: var(--red-700);
+  text-decoration-color: var(--rose-800);
+  transition: var(--transition);
 }
 
 a:hover {
-  color: var(--zinc-600);
+  color: var(--rose-600);
+  text-decoration-color: var(--rose-600);
+  text-decoration-thickness: 4px;
 }
 
 h1,
@@ -69,8 +87,9 @@ header {
 }
 
 #logo a {
-  text-decoration-color: var(--zinc-900);
-  text-decoration-thickness: 0.25rem;
+  color: var(--zinc-900);
+  text-decoration: none;
+  text-transform: lowercase;
 }
 
 #logo a h1 {
@@ -88,10 +107,6 @@ header {
   margin: 0 auto;
   padding: 0;
 }
-
-.main-menu li {
-  list-style: none;
-}
 .main-menu li a {
   font-weight: 700;
   letter-spacing: 1px;
@@ -99,26 +114,59 @@ header {
   text-underline-position: under;
 }
 
+.patreon {
+  background-image: url("//bojankrivokapic.com/slike/svg/patreon.svg");
+}
+
+.facebook {
+  background-image: url("//bojankrivokapic.com/slike/svg/facebook.svg");
+}
+
+.main-menu a.facebook,
+.main-menu a.patreon {
+  display: inline-block;
+  width: 1.25rem;
+  height: 1rem;
+}
+
 .index {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-}
-
-.index a {
-  text-decoration: none;
+  gap: 2rem;
 }
 
 .index-bio-image {
   object-fit: contain;
-  max-width: 100%;
+  width: 100%;
+  border: 8px solid var(--rose-800);
+  box-shadow: var(--shadow);
 }
 
-.index-item {
+.index-item,
+.books li {
   background-color: var(--zinc-50);
   padding: 1rem;
   text-align: start;
-  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  box-shadow: var(--shadow);
+}
+
+.index-item h3 {
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  font-size: 1.25rem;
+  line-height: 1.5em;
+  margin: 0 0 1rem 0;
+}
+
+.index-item h3 a {
+  text-underline-position: under;
+  text-decoration-color: var(--rose-800);
+  text-decoration-thickness: 2px;
+}
+
+.index-item h3 a:hover {
+  text-decoration-thickness: 4px;
+  text-decoration-color: var(--rose-600);
 }
 
 .index-news-list {
@@ -127,29 +175,113 @@ header {
   gap: 1rem;
 }
 
-.index-news-title {
+.index-news-title,
+.page-title {
+  font-weight: 900;
+  font-size: 2rem;
   text-transform: uppercase;
   letter-spacing: 1px;
   text-align: center;
-  margin: 0 0 1rem 0;
+  margin: 0 0 2rem 0;
+  color: var(--zinc-600);
 }
 
-.index-news-item h3 {
-  font-size: 1.25rem;
-  line-height: 1.25em;
-  margin: 0 0 1rem 0;
-}
-
-.archive-link {
+.btn-wrapper {
   text-align: center;
+  margin: 2rem 0 0 0;
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  color: var(--zinc-50);
+  background: var(--zinc-900);
+  border-radius: 10px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  transition: var(--transition);
+}
+
+.btn:hover {
+  background: var(--rose-600);
+  color: var(--zinc-50);
 }
 
 footer {
   text-align: center;
 }
 
+/* Pages */
+
+.books {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.books li a {
+  display: block;
+  float: left;
+  margin-right: 2rem;
+  clear: before;
+}
+
+.books li h2 {
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  font-size: 2rem;
+  line-height: 1.5em;
+  margin: 0 0 1rem 0;
+}
+
 @media (min-width: 768px) {
   body {
     font-size: 18px;
+    padding: 4rem 4rem;
+    gap: 6rem;
+    max-width: 1280px;
+  }
+  header {
+    gap: 4rem;
+  }
+  .main-menu {
+    margin: 0 auto;
+    gap: 2rem;
+  }
+  .index {
+    gap: 8rem;
+  }
+
+  #logo a h1 {
+    font-size: 5rem;
+  }
+  .index-bio {
+    margin: 0 auto;
+    max-width: 900px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+
+  .figcaption {
+    width: 500px;
+  }
+
+  .index-bio-image {
+    width: 300px;
+  }
+
+  .index-news-list {
+    max-width: 800px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-auto-rows: 1fr;
+    gap: 2rem;
+  }
+
+  .index-item,
+  .books li {
+    padding: 2rem;
   }
 }
