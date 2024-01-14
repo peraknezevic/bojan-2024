@@ -7,7 +7,9 @@
 
 		<title><?php wp_title( '|', true, 'right' ); ?></title>
 
-		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
 
         <?php wp_head(); ?>
         
@@ -22,13 +24,15 @@
 	</head>
 	<body <?php body_class(); ?>>
 
-		<div class="wrap">
-
 			<header>
-                <h1 id="logo"><a href="<?php echo home_url('/'); ?>"><span><?php bloginfo('name'); ?></span></a></h1>
-                <nav class="meni">
-                   <ul>
-                    <li><a href="//bojankrivokapic.com//cat/novosti" title="Novosti">Novosti</a></li>
+                <div id="logo">
+                    <a href="<?php echo home_url('/'); ?>">
+                      <h1><?php bloginfo('name'); ?></h1>
+                    </a>
+                </div>
+                <nav>
+                   <ul class="main-menu">
+                    <li><a href="//bojankrivokapic.com/cat/novosti" title="Novosti">Novosti</a></li>
                     <li><a href="//bojankrivokapic.com/cat/tekstovi" title="Tekstovi">Tekstovi</a></li>
                     <li><a href="//bojankrivokapic.com/knjige" title="Objavljene knjige">Knjige</a></li>
                     <li><a href="//bojankrivokapic.com/biografija" title="Biografija autora">Biografija</a></li>
