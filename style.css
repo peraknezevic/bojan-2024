@@ -15,7 +15,7 @@
   --zinc-900: #18181b;
   --rose-50: #fff1f2;
   --rose-600: #e11d48;
-  ]--rose-900: #881337;
+  --rose-900: #881337;
 
   --main-font: "Inter", sans-serif;
   --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
@@ -88,6 +88,7 @@ a {
   text-decoration-thickness: 2px;
   text-decoration-color: var(--rose-900);
   transition: var(--transition);
+  cursor: pointer;
 }
 
 a:hover {
