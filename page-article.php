@@ -1,3 +1,5 @@
+<?php /* Template Name: Page Article */ ?>
+
 <?php get_header(); ?>
 	
 	<?php if (have_posts()) : ?>
@@ -8,12 +10,11 @@
 
 	<h1 class="page-title"><span><?php the_title(); ?></span></h1>
 
-		<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-						
-				
+		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+										
 				<?php the_content(); ?>
 											
-		</div>
+		</article>
 		
 		<?php endwhile; ?>
 		
