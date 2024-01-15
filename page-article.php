@@ -8,10 +8,10 @@
 		
 	<?php while (have_posts()) : the_post(); ?>
 
-	<h1 class="page-title"><span><?php the_title(); ?></span></h1>
+	<h1 class="title"><?php the_title(); ?></h1>
 
 		<article>
-										
+	
 				<?php the_content(); ?>
 											
 		</article>

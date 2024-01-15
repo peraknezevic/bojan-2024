@@ -2,7 +2,7 @@
 
     <main>
 
-    <h1 class="page-title">Novosti</h1>
+    <h1 class="title">Novosti</h1>
 
 	<div class="articles">
 
@@ -16,7 +16,7 @@
 
 		<article>
 
-			<h2 id="article-title"><a href="<?php the_permalink(); ?>"><span><?php the_title(); ?></span></a></h2>
+			<h2 id="title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 
 				<?php the_excerpt(); ?>
 

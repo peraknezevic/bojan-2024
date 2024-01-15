@@ -2,24 +2,28 @@
 
     <main>
 
-    <h1 class="naslov"><span>Tekstovi</span></h1>
+    <h1 class="title">Tekstovi</h1>
 
-    <div class="card-container">
+    <ul class="intermezzo">
 
     <?php if (have_posts()) : ?>
 
         <?php while (have_posts()) : the_post(); ?>
 
-        <div id="post-<?php the_ID(); ?>" class="card">
+        <li>
         <a href="<?php the_permalink(); ?>">
-            <?php the_post_thumbnail( array( 432, 324 ) ); ?>
-            <div class="card-head">
-                <span>Intermezzo</span>
-                <h2><?php the_title(); ?></h2>
-                <p><?php echo excerpt(12); ?></p>
-            </div>
+            <?php the_post_thumbnail( array( 500, 400 ) ); ?>
         </a>
-        </div>
+            <div>
+                <small>Intermezzo</small>
+                <h2>
+                    <a href="<?php the_permalink(); ?>">
+                    <?php the_title(); ?>
+                    </a>
+                </h2>
+                <p><?php echo excerpt(20); ?></p>
+            </div>
+        </li>
 
     <?php endwhile; ?>
 
@@ -29,7 +33,7 @@
 
         <?php endif; ?>
 
-    </div>
+    </ul>
 
 	<?php $args = array(
 			'prev_text'          => __('&#8592; Prethodno'),

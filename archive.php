@@ -12,7 +12,7 @@
 
 		<article>
 
-			<h2 id="post-title">
+			<h2 id="title">
 				<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a
 			></h2>
 
