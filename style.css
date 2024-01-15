@@ -120,8 +120,7 @@ footer {
   text-underline-position: under;
 }
 
-.facebook path,
-.x path {
+.icon path {
   fill: var(--rose-900);
 }
 .facebook:hover path,
@@ -162,6 +161,16 @@ article {
   padding: 2rem;
   margin: 0 auto;
   max-width: 768px;
+}
+
+time {
+  text-align: right;
+}
+
+.share {
+  display: flex;
+  justify-content: end;
+  gap: 2rem;
 }
 
 .item h3 {
@@ -405,7 +414,7 @@ form textarea {
   }
 
   .index-bio-image {
-    width: 300px;
+    width: 400px;
   }
 
   .index-news-list {

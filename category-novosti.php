@@ -14,19 +14,15 @@
 
 		<?php while (have_posts()) : the_post(); ?>
 
-		<div class="news-item">
+		<article>
 
-			<h2 id="post-title"><a href="<?php the_permalink(); ?>"><span><?php the_title(); ?></span></a></h2>
-
-			<div class="entry">
+			<h2 id="article-title"><a href="<?php the_permalink(); ?>"><span><?php the_title(); ?></span></a></h2>
 
 				<?php the_excerpt(); ?>
 
-			</div>
-
             <time datetime="<?php the_time('d-m-Y'); ?>" pubdate>Objavljeno: <?php the_time('d. m. Y.'); ?></time><?php echo ah_share_buttons(); ?>
 
-		</div>
+		</article>
 
 		<?php endwhile; ?>
 

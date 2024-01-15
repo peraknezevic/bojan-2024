@@ -6,12 +6,11 @@
 		
     <main>
 
-	<h1 class="page-title"><span><?php the_title(); ?></span></h1>
+	<h1 class="page-title"><?php the_title(); ?></h1>
 
-		<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-						
-				
-				<?php the_content(); ?>
+		<div>
+			
+			<?php the_content(); ?>
 											
 		</div>
 		

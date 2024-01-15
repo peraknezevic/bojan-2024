@@ -1,5 +1,7 @@
-<div id="post-not-found" <?php post_class(); ?>>
+<div class="item">
 	
-	<h2><?php _e('Stranica nije pronađena', 'blank-theme'); ?></h2>
+	<h2>Stranica nije pronađena</h2>
+
+	<p>Sadržaj koji ste tražili je premešten ili uklonjen.</p>
 	
 </div>

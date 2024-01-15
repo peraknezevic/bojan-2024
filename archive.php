@@ -10,11 +10,13 @@
 
 		<?php while (have_posts()) : the_post(); ?>
 
-		<div id="post-<?php the_ID(); ?>" <?php post_class() ?>>
+		<article>
 
-			<h2 id="post-title"><a href="<?php the_permalink(); ?>"><span><?php the_title(); ?></span></a></h2>
+			<h2 id="post-title">
+				<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a
+			></h2>
 
-			<div class="entry">
+			<div>
 
 				<?php the_excerpt( $more_link_text ); ?>
 
@@ -22,7 +24,7 @@
 
             <time datetime="<?php the_time('d-m-Y'); ?>" pubdate>Objavljeno: <?php the_time('d. m. Y.'); ?></time><?php echo ah_share_buttons(); ?>
 
-		</div>
+		</article>
 
 		<?php endwhile; ?>
 

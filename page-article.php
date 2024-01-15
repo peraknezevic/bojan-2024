@@ -1,16 +1,16 @@
 <?php /* Template Name: Page Article */ ?>
 
 <?php get_header(); ?>
+		
+	<main>
 	
 	<?php if (have_posts()) : ?>
 		
-		<?php while (have_posts()) : the_post(); ?>
-		
-    <main>
+	<?php while (have_posts()) : the_post(); ?>
 
 	<h1 class="page-title"><span><?php the_title(); ?></span></h1>
 
-		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+		<article>
 										
 				<?php the_content(); ?>
 											
