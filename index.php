@@ -4,7 +4,7 @@
 
 		<figure class="index-bio">
 
-			<img src="./images/bojan-krivokapic-500-color.jpg" class="index-bio-image" />
+			<img src="<?php get_site_url(); ?>/slike/bojan-krivokapic-500-color.jpg" class="index-bio-image" />
 
 			<figcaption>
 				<article>
