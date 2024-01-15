@@ -2,7 +2,9 @@
 
     <main>
 
-    <h1 class="naslov"><span>Novosti</span></h1>
+    <h1 class="page-title">Novosti</h1>
+
+	<div class="articles">
 
 	<?php if (have_posts()) : ?>
 
@@ -12,13 +14,13 @@
 
 		<?php while (have_posts()) : the_post(); ?>
 
-		<div id="post-<?php the_ID(); ?>" <?php post_class() ?>>
+		<div class="news-item">
 
 			<h2 id="post-title"><a href="<?php the_permalink(); ?>"><span><?php the_title(); ?></span></a></h2>
 
 			<div class="entry">
 
-				<?php the_excerpt( $more_link_text ); ?>
+				<?php the_excerpt(); ?>
 
 			</div>
 
@@ -28,20 +30,22 @@
 
 		<?php endwhile; ?>
 
+		<?php $args = array(
+				'prev_text'          => __('&#8592; Prethodno'),
+				'next_text'          => __('Sledeće &#8594;'),
+			); ?>
+
 	<?php else : ?>
 
 		<?php get_template_part('inc/gone'); ?>
 
 	<?php endif; ?>
 
-	<?php $args = array(
-			'prev_text'          => __('&#8592; Prethodno'),
-			'next_text'          => __('Sledeće &#8594;'),
-		); ?>
-
 	<nav class="paging">
 		<?php echo paginate_links( $args ); ?>
 	</nav>
+
+	</div>
 
     </main>
 

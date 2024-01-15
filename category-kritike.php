@@ -2,7 +2,9 @@
 
     <main>
 
-    <h1 class="naslov"><span>Kritike</span></h1>
+    <h1 class="page-title">Kritike</h1>
+
+	<div class="articles">
 
 	<?php if (have_posts()) : ?>
 
@@ -12,13 +14,13 @@
 
 		<?php while (have_posts()) : the_post(); ?>
 
-		<div id="post-<?php the_ID(); ?>" <?php post_class() ?>>
+		<div class="news-item">
 
 			<h2 id="post-title"><a href="<?php the_permalink(); ?>"><span><?php the_title(); ?></span></a></h2>
 
 			<div class="entry">
 
-				<?php the_excerpt( $more_link_text ); ?>
+				<?php the_excerpt(); ?>
 
 			</div>
             

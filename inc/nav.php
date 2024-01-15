@@ -2,8 +2,8 @@
 
 <div class="nav nav-post nav-single">
 	
-	<?php previous_post_link('<div class="nav-prev">%link</div>', '&larr;&nbsp;%title'); ?>
-	<?php next_post_link('<div class="nav-next">%link</div>', '%title&nbsp;&rarr;'); ?>
+	<?php previous_post_link('<div>%link</div>', '&larr;&nbsp;%title'); ?>
+	<?php next_post_link('<div>%link</div>', '%title&nbsp;&rarr;'); ?>
 	
 </div>
 

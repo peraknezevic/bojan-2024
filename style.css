@@ -1,5 +1,5 @@
 /*
-	Theme Name:        Bojan
+	Theme Name:        Bojan 2024
 	Theme URI:         http://bojankrivokapic.com
 	Description:       Theme for Bojan's website
 	Author:            Pera Knezevic
@@ -26,9 +26,11 @@
   --transition: all 0.1s ease-out;
 }
 
+* {
+  box-sizing: border-box;
+}
 html {
   border-top: 0.5rem solid var(--zinc-900);
-  box-sizing: border-box;
 }
 body {
   font-family: var(--main-font);
@@ -82,6 +84,10 @@ header {
   gap: 2rem;
 }
 
+footer {
+  margin: 0 auto;
+}
+
 #logo {
   text-align: center;
 }
@@ -114,10 +120,12 @@ header {
   text-underline-position: under;
 }
 
-.facebook path {
+.facebook path,
+.x path {
   fill: var(--rose-900);
 }
-.facebook:hover path {
+.facebook:hover path,
+.x:hover path {
   fill: var(--rose-600);
 }
 
@@ -128,29 +136,35 @@ header {
   height: 1rem;
 }
 
-.index {
+.index,
+.articles {
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
 
 .index-bio-image {
-  object-fit: contain;
+  object-fit: cover;
   width: 100%;
   border: 8px solid var(--rose-800);
   box-shadow: var(--shadow);
 }
 
-.index-item,
-.books li,
+.item,
 article {
   background-color: var(--zinc-50);
   padding: 1rem;
   text-align: start;
   box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2rem;
+  margin: 0 auto;
+  max-width: 768px;
 }
 
-.index-item h3 {
+.item h3 {
   font-weight: 700;
   letter-spacing: 0.5px;
   font-size: 1.25rem;
@@ -158,13 +172,13 @@ article {
   margin: 0 0 1rem 0;
 }
 
-.index-item h3 a {
+.item h3 a {
   text-underline-position: under;
   text-decoration-color: var(--rose-800);
   text-decoration-thickness: 2px;
 }
 
-.index-item h3 a:hover {
+.item h3 a:hover {
   text-decoration-thickness: 4px;
   text-decoration-color: var(--rose-600);
 }
@@ -188,7 +202,7 @@ article {
 
 .btn-wrapper {
   text-align: center;
-  margin: 2rem 0 0 0;
+  margin: 2rem 0 1rem 0;
 }
 
 .btn,
@@ -213,6 +227,43 @@ footer {
   text-align: center;
 }
 
+/* Pagination */
+
+.paging {
+  display: flex;
+  gap: 1rem;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.paging span,
+.paging a {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: #fff;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: var(--transition);
+}
+
+.paging span {
+  opacity: 0.25;
+}
+
+.paging a:hover {
+  color: #fff;
+  background: #db2f27;
+}
+
+a.read-more {
+  color: var(--zinc-50);
+  background-color: var(--rose-800);
+  margin: 0 0.5rem;
+  padding: 0 0.5rem;
+}
+
 /* Pages */
 
 article {
@@ -222,22 +273,35 @@ article {
 }
 
 .books {
+  padding: 0;
+  column-count: 1;
+  column-gap: 2rem;
+}
+
+.books li {
+  background-color: var(--zinc-50);
+  text-align: start;
+  box-shadow: var(--shadow);
   display: flex;
+  gap: 1rem;
   flex-direction: column;
-  gap: 2rem;
+  margin-bottom: 2rem;
   padding: 0;
 }
-.books li a {
+.books li a img {
   display: block;
-  margin: 0 auto 1rem auto;
-  text-align: center;
-  clear: before;
+  width: 100%;
 }
+.books li div {
+  padding: 0 2rem 2rem 2rem;
+}
+
 .books li h2 {
   font-weight: 700;
   letter-spacing: 0.5px;
-  font-size: 2rem;
+  font-size: 1.5rem;
   line-height: 1.5em;
+  padding: 0;
   margin: 0 0 1rem 0;
 }
 
@@ -271,7 +335,6 @@ article {
 }
 
 /* Contact Form */
-
 form {
   background-color: var(--zinc-50);
   margin: 0 auto;
@@ -355,10 +418,13 @@ form textarea {
     gap: 2rem;
   }
 
-  .index-item,
-  .books li,
-  article {
+  .paging {
+    display: flex;
+    gap: 1rem;
+    margin: 0 auto;
     padding: 2rem;
+    text-align: center;
+    flex-wrap: nowrap;
   }
 
   .gallery {
@@ -366,9 +432,8 @@ form textarea {
     column-count: 3;
     column-gap: 2rem;
   }
-
-  .books li a {
-    float: left;
-    margin: 0 2rem 0 0;
+  .books {
+    column-count: 2;
+    column-gap: 3rem;
   }
 }
