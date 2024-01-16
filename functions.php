@@ -2,11 +2,6 @@
 
 if (!defined('ABSPATH')) exit;
 
-add_theme_support('post-thumbnails');
-
-function conditional_styles() {
-	wp_enqueue_style('bojan-2024', get_stylesheet_uri(), array(), null);
-}
 
 // Automatic theme updates from the GitHub repository
 add_filter('pre_set_site_transient_update_themes', 'automatic_GitHub_updates', 100, 1);
@@ -37,6 +32,12 @@ function automatic_GitHub_updates($data) {
     }
   }
   return $data;
+}
+
+add_theme_support('post-thumbnails');
+
+function conditional_styles() {
+	wp_enqueue_style('bojan-2024', get_stylesheet_uri(), array(), null);
 }
 
 function excludeCat($query) {
