@@ -35,6 +35,7 @@
                     <li><a href="<?php get_site_url(); ?>/cat/novosti" title="Novosti">Novosti</a></li>
                     <li><a href="<?php get_site_url(); ?>/cat/tekstovi" title="Tekstovi">Tekstovi</a></li>
                     <li><a href="<?php get_site_url(); ?>/knjige" title="Objavljene knjige">Knjige</a></li>
+                    <li><a href="<?php get_site_url(); ?>/radionice" title="Radionice kreativnog pisanja">Radionice</a></li>
                     <li><a href="<?php get_site_url(); ?>/biografija" title="Biografija autora">Biografija</a></li>
                     <li><a href="<?php get_site_url(); ?>/intervjui" title="Intervjui">Intervjui</a></li>
                     <li><a href="<?php get_site_url(); ?>/cat/kritike" title="Kritike i komentari">Kritike</a></li>
