@@ -3,7 +3,7 @@
 	Theme URI:         http://bojankrivokapic.com
 	Description:       Theme for Bojan's website
 	Author:            Pera Knezevic
-	Version:           2.0
+	Version:           2.01
 	License:           GNU General Public License v3 or later
 */
 :root {
@@ -473,7 +473,7 @@ form textarea {
   }
 
   .index-bio-image {
-    width: 400px;
+    width: 300px;
   }
 
   .index-news-list {
@@ -508,5 +508,11 @@ form textarea {
   .intermezzo {
     max-width: 768px;
     gap: 4rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .index-bio-image {
+    width: 400px;
   }
 }
