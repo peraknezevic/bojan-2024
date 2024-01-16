@@ -2,7 +2,6 @@
 
 if (!defined('ABSPATH')) exit;
 
-
 // Automatic theme updates from the GitHub repository
 add_filter('pre_set_site_transient_update_themes', 'automatic_GitHub_updates', 100, 1);
 function automatic_GitHub_updates($data) {
