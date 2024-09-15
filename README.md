@@ -7,4 +7,4 @@ Author:            Pera Knezevic\
 Author URI:        https://peraknezevic.com/ \
 Version:           2.0\
 License:           GNU General Public License v3 or later\
-License URI:       http://www.gnu.org/licenses/gpl-3.0.html \
+License URI:       http://www.gnu.org/licenses/gpl-3.0.html 
